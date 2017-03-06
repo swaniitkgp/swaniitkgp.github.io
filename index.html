@@ -17,8 +17,67 @@
 		</style> -->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
-		<script>
+	
+		<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+
+ border-top: 16px solid blue;
+ border-right: 16px solid green;
+ border-bottom: 16px solid red;
+ width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+
+	
+<script>
+
 
     /* Light YouTube Embeds by @labnol */
     /* Web: http://labnol.org/?p=27941 */
@@ -52,240 +111,40 @@
     }
 
 </script>
+<script>
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 10000);
+<!-- 			window.location='DS16main.html';
+ -->		}
+
+		function showPage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementById("myDiv").style.display = "block";
+		}
+</script>
 
 	</head>
-	<body>
+	
+	
+	<body style="background-image:url(images/dronebg.png)" onload="myFunction()" style="margin:0;">
+   
+   
+    <script>
+        var timer = setTimeout(function() {
+            window.location='DS16main.html'
+        }, 10000);
+    </script>
+	
+		<div id="loader"></div>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">&#916 	&#931 - XVI</a>
-				<nav>
-					<ul>
-						<li><a href="index.html" class="active">&#916 &#931 - XVI</a></li>
-						<li><a href="http://cse.iitkgp.ac.in/~smisra/swan/index.html" class="active">SWAN Lab</a></li>
-<!-- 						<li><a href="elements.html">Elements</a></li>
- -->					</ul>
-				</nav>
-			</header>
+		<div style="display:none;" id="myDiv" class="animate-bottom">
+		  
+		</div>
+		<center><h1>DRONE SQUAD 16</h1></center>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="top center" ></a> -->
-							<div class="content">
-								<!-- <div class="inner"> -->
-<!-- 									<img src="images/hardware.PNG" alt="Smiley face1" align="left" style="float:left;width:350px;height:350px;">
-									<img src="images/programming.PNG" alt="Smiley face2" align="center" style="float:center;width:350px;height:350px;">
-									<img src="images/platforms.PNG" alt="Smiley face3" align="right" style="float:center;width:350px;height:350px;"> -->
-									<!-- </ul> -->
-									<marquee behavior="scroll" direction="left" scrollamount="15">
-									<img src="images/pic_drone.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone2.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone3.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone15.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone16.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone18a.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone19a.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone17.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone4.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone5.jpg" width="640" height="320" alt="Natural" />
-<!-- 									<img src="images/pic_drone6.jpg" width="640" height="320" alt="Natural" />
- -->									<img src="images/pic_drone7.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone8.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone9.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone10.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone11.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone12.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone13.jpg" width="640" height="320" alt="Natural" />
-									<img src="images/pic_drone14.jpg" width="640" height="320" alt="Natural" />
-									</marquee>
-									<!-- </div> -->
-							</div>
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Drone Squad 16</h1>
-							<h3 class="major">A SWAN Lab, CSE, IIT Kharagpur Initiative</h3>
-<!-- 							<span class="image fit"><img src="images/pic_drone_profile.jpg" alt="" style="float:right;width:600px;height:400px;"/></span>
- -->							<p>The drone group at SWAN lab works in the domain of networking, communication and control of UAVs (currently quadrotors/quadcopters) with an aim to address various real-time issues plaguing several 
-							domains such as – Military, Disaster management, Agriculture, Infrastructure (communication link setup, connectivity), traffic and others. Various avenues and solutions are being actively explored for 
-							arming the UAVs with offensive, defensive as well as peace-time application capabilities. Some of these application areas are actively supported by projects from various Government departments while the 
-							remaining ones are taken up on a self-interest basis. Application areas such as agriculture are actively supported by various governmental agencies, whereas efforts are underway to involve various agencies
-							and ministries for areas involving military and disaster management based applications.</p>
-							<p> Technologically, the group focuses more on the networking and communication aspects of UAVs as compared to its structural and energy aspects. Deep learning based data prediction and tracking, Reinforcement 
-							learning based stabilization and control, networked controls (both aerial networking as well as air-ground networking), wireless UAV network penetration testing and others are some of the technological aspects 
-							being worked upon. From a research point of view, the group’s works can be summarized into the following six areas – automation, swarm, localization, networks, security vulnerabilities and tracking. These problems 
-							are being handled by a group of PhD scholars, Project staff, Masters and Undergraduate students under my guidance.</p>
-						</div>
-						
-							
-					</section>
-					
-					
-					
-					<section id="team" class="wrapper">
-						<div class="inner">
-							<h2 class="major">Team</h2>
-							<span class="image fit"><img src="images/team.jpg" alt="" /></span>
-							<span>
-							<img src="images/bhim.JPG" width="560" height="320" alt="Natural" />
-							<img src="images/pawan.JPG" width="560" height="320" alt="Natural" />
-							</span>
-							<!-- <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						 --><div class="table-wrapper">
-										<table>
-											
-											<tbody>
-											<tr>
-													<td><b>Sudip Misra</b></td>
-													<td>Associate Professor</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Mentor</td>
-													<td><a href="http://cse.iitkgp.ac.in/~smisra/" class="button scrolly" target="_blank">Website</a></td>
-												</tr>
-											    <tr>
-													<td><b>Anandarup Mukherjee</b></td>
-													<td>SRF, PhD Research Scholar</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Sensors, Controls, Vision and Automation</td>
-													<td><a href="https://in.linkedin.com/in/anandarupmukherjee" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>
-												<tr>
-													<td><b>Abhishek Bera</b></td>
-													<td>PhD Research Scholar</td>
-													<td>ATDC, IIT Kharagpur</td>
-													<td>Sensors and Communications</td>
-													<td><a href="https://in.linkedin.com/in/abhishek-bera-46087a122" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>
-												<tr>
-													<td><b>Saswati Pal</b></td>
-													<td>SRF</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Imaging and Sensors</td>
-													<td><a href="https://in.linkedin.com/in/saswati-pal-b9109b82" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>
-												<tr>
-													<td><b>Nidhi Pathak</b></td>
-													<td>SPO</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Sensors, Controls and Communications</td>
-													<td><a href="https://in.linkedin.com/in/nidhi-pathak-b57a1070" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>
-												<tr>
-													<td><b>Bapi Reddy</b></td>
-													<td>B.Tech</td>
-													<td>EE, IIT Kharagpur</td>
-													<td>Vision, Guidance and Communications</td>
-													<td><a href="https://www.linkedin.com/in/bapi-r-46085485/" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>
-												<tr>
-													<td><b>Shubham Sharma</b></td>
-													<td>B.Tech</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Security and Communications</td>
-													<td><a href="https://www.facebook.com/rodoconner" class="button scrolly" target="_blank">Facebook</a></td>
-												</tr>	
-												<tr>
-													<td><b>Vadde Santosha Pradeep Chandra</b></td>
-													<td>B.Tech</td>
-													<td>CSE, IIT Kharagpur</td>
-													<td>Controls & Communications</td>
-													<td><a href="https://www.linkedin.com/in/vaddesantosh/" class="button scrolly" target="_blank">Linkedin</a></td>
-												</tr>												
-											</tbody>
-
-										</table>
-									</div>
-						</div>
-					</section>
-					
-					<section>
-						<div class="inner">
-							<h2 class="major">Drone Trial Videos</h2>
-							<div class="table-wrapper">
-							<table>
-											
-											<tbody>
-											    <tr>
-													<td><div class="youtube-player" data-id="6wwd9LeDLlU?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="zV9JalyiT0Y?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="REgYIGxWVng?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="ZpdFFBs5Zzs?ecver=1"></div></td>
-												</tr>
-												 <tr>
-													<td><div class="youtube-player" data-id="dcqpEuoL8W8?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="UP-cuAJS33s?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="YK0M1v_9Tww?ecver=1"></div></td>
-													<td><div class="youtube-player" data-id="QwR246Gr2gs?ecver=1"></div></td>
-												</tr>
-																							
-											</tbody>
-
-								</table>
-								</div>								
-						</div>
-
-					</section>
-					
-		<div id="wrapper">
-<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="top center" ></a> -->
-			<div class="inner">
-							<h2 class="major">Aerial Photos of Test Area</h2>
-							<div class="content">
-								<!-- <div class="inner"> -->
-<!-- 									<img src="images/hardware.PNG" alt="Smiley face1" align="left" style="float:left;width:350px;height:350px;">
-									<img src="images/programming.PNG" alt="Smiley face2" align="center" style="float:center;width:350px;height:350px;">
-									<img src="images/platforms.PNG" alt="Smiley face3" align="right" style="float:center;width:350px;height:350px;"> -->
-									<!-- </ul> -->
-									<marquee behavior="scroll" direction="left" scrollamount="5">
-									<img src="drone_images/1.png" width="400" height="320" alt="Natural" />
-									<img src="drone_images/2.png" width="400" height="320" alt="Natural" />
-									<img src="drone_images/3.png" width="400" height="320" alt="Natural" />
-									<img src="drone_images/4.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/5.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/6.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/7.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/8.jpg" width="640" height="320" alt="Natural" />
-<!-- 									<img src="images/pic_drone6.jpg" width="640" height="320" alt="Natural" />
- -->									<img src="drone_images/8.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/9.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/10.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/11.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/12.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/13.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/14.jpg" width="640" height="320" alt="Natural" />
-									<img src="drone_images/15.jpg" width="640" height="320" alt="Natural" />
-									</marquee>
-									<!-- </div> -->
-							</div>
-						</div>
-					</div>
-
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-		<!-- hitwebcounter Code START -->
-			<a href="http://www.hitwebcounter.com" target="_blank">
-			<img src="http://hitwebcounter.com/counter/counter.php?page=6593752&style=0009&nbdigits=7&type=page&initCount=20000" title="install tracking codes" Alt="install tracking codes"   border="0" >
-			</a> <br/>
-                                        <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="Visitors Total" 
-                                        target="_blank" style="font-family: Geneva, Arial, Helvetica; 
-                                        font-size: 9px; color: #9C9795; text-decoration: none ;"><strong>Visitors Total                                        </strong>
-                                        </a>   
-                            
+		
+		
 	</body>
 </html>
